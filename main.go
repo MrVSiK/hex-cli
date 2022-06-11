@@ -99,7 +99,7 @@ func main() {
 					headers["token"] = token
 
 					fmt.Printf("Uploading %s...\n", name)
-					response, err := client.R().SetHeaders(headers).SetBodyJsonMarshal(body).SetResult(&result).Post(os.Getenv("URI") + "/image/")
+					response, err := client.R().SetHeaders(headers).SetBodyJsonMarshal(body).SetResult(&result).Post(os.Getenv("URI") + "/file/")
 
 					if err != nil {
 						log.Fatal(err)
